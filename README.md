@@ -13,10 +13,11 @@ pip install 'crewai[tools]'
 
 ## Setting Up Serper Search
 - Get your free Serper API key from [here](https://serper.dev/)
-- Create an env file named '.env' and paste this line:
+- Create an environment file named '.env' and paste this line:
   ```
   SERPER_API_KEY=<YOUR_SERPER_API_KEY>
   ```
+- Use this environment file to set up your API keys for LLM models, if applicable
 
 ## Installing and Running Models Locally
 
