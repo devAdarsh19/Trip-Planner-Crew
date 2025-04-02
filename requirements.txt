@@ -1,0 +1,4 @@
+crewai
+unstructured
+pyowm
+python-dotenv
