@@ -1,6 +1,7 @@
 import os
 from crewai import Crew
 
+from typing import List
 from textwrap import dedent
 from agents import TravelAgents
 from tasks import TravelTasks
@@ -11,10 +12,10 @@ load_dotenv()
 
 class TravelCrew:
     def __init__(self, current_location, place_of_interest, date_range, interests):
-        self.current_location = current_location
-        self.place_of_interest = place_of_interest
-        self.date_range = date_range
-        self.interests = interests
+        self.current_location: str = current_location
+        self.place_of_interest: str = place_of_interest
+        self.date_range: str = date_range
+        self.interests: List[str] = interests
 
     def run(self):
         # Define your custom agents and tasks in agents.py and tasks.py
@@ -61,17 +62,17 @@ class TravelCrew:
 
 
 # This is the main function that you will use to run your custom crew.
-if __name__ == "__main__":
-    print("## Trip Planner Crew")
-    print("-------------------------------")
-    current_location = input(dedent("""Where will you be traveling from? : """))
-    place_of_interest = input(dedent("""What place would you like to travel to? : """))
-    date_range = input(dedent("""How long do you intend to stay there? : """))
-    interests = input(dedent("""What are some of your high level interests and hobbies? : """))
+# if __name__ == "__main__":
+#     print("## Trip Planner Crew")
+#     print("-------------------------------")
+#     current_location = input(dedent("""Where will you be traveling from? : """))
+#     place_of_interest = input(dedent("""What place would you like to travel to? : """))
+#     date_range = input(dedent("""What is your travel date range? : """))
+#     interests = input(dedent("""What are some of your high level interests and hobbies? : """))
 
-    travel_crew = TravelCrew(current_location, place_of_interest, date_range, interests)
-    result = travel_crew.run()
-    print("\n\n########################")
-    print("## Here is you custom crew run result:")
-    print("########################\n")
-    print(result)
+#     travel_crew = TravelCrew(current_location, place_of_interest, date_range, interests)
+#     result = travel_crew.run()
+#     print("\n\n########################")
+#     print("## Here is you custom crew run result:")
+#     print("########################\n")
+#     print(result)
